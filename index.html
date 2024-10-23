@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random</title>
+</head>
+<body>
+    <table style="width: 100%;"> 
+        <!-- constroi uma <table> com largura maxima -->
+    <script>
+        const cores = ["red","blue","green","purple","yellow"];
+        // declara as cores a ser utilizadas
+        for(let i=1;i<3;i++)
+        // estrutura de repetição para gerar as linhas
+          {
+            document.write("<tr>");
+                //insere diretamente a <tr>(tag html), mesmo no script               
+                for(let j=1;j<10;j++)
+                // estrutura de repetição para as colunas
+                {
+                    let pos= Math.trunc(Math.random()*5);
+                    // Math.trunc é uma função em html que remove os decimais
+                    //math.random()*5 gera um valor aleatorio de 0 à 4.
+                    // logo gera um numero aleatorio inteiro de 0 à 4.
+                    document.write(`<td style='background-color:${cores[pos]}'>&nbsp;</td>`);
+                    //insere diretamente a tag <td> customizada com uma cor sorteada acima 
+                    // e um espaço sem conteúdo porem com uma cor da variavel cores.
+                  }
+                  document.write("</tr>");
+                  //fecha o <tr>
+          }
+    </script>
+    </table>
+</body>
+</html>
